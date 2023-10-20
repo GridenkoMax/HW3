@@ -12,7 +12,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var redValue: UILabel!
     @IBOutlet weak var greenValue: UILabel!
     @IBOutlet weak var blueValue: UILabel!
- 
+    
     @IBOutlet weak var viewRGB: UIView!
     
     @IBOutlet weak var redSlider: UISlider!
@@ -29,11 +29,11 @@ final class ViewController: UIViewController {
         sendColor()
         setupView()
         setupLabels()
-
+        
     }
     @IBAction func redSliderAction() {
         redValue.text = String(format: "%.2f", redSlider.value)
-       setupView()
+        setupView()
         
     }
     @IBAction func greenSliderAction() {

@@ -58,16 +58,48 @@
 		CE48FF282AC71CE5009290BC /* HW3 */ = {
 			isa = PBXGroup;
 			children = (
-				CE48FF292AC71CE5009290BC /* AppDelegate.swift */,
-				CE48FF2B2AC71CE5009290BC /* SceneDelegate.swift */,
-				CE48FF2D2AC71CE5009290BC /* ViewController.swift */,
-				CEE1E6362AE02DB100AAADC7 /* StartScreenViewController.swift */,
-				CE48FF2F2AC71CE5009290BC /* Main.storyboard */,
-				CE48FF322AC71CE6009290BC /* Assets.xcassets */,
-				CE48FF342AC71CE6009290BC /* LaunchScreen.storyboard */,
-				CE48FF372AC71CE6009290BC /* Info.plist */,
+				CE9F93072AE2D8CF00246E38 /* App */,
+				CE9F93052AE2D81D00246E38 /* ViewControllers */,
+				CE9F93062AE2D85100246E38 /* StoryBoards */,
+				CE9F93082AE2D8FF00246E38 /* Resources */,
 			);
 			path = HW3;
+			sourceTree = "<group>";
+		};
+		CE9F93052AE2D81D00246E38 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE48FF2D2AC71CE5009290BC /* ViewController.swift */,
+				CEE1E6362AE02DB100AAADC7 /* StartScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE9F93062AE2D85100246E38 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				CE48FF2F2AC71CE5009290BC /* Main.storyboard */,
+				CE48FF342AC71CE6009290BC /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		CE9F93072AE2D8CF00246E38 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE48FF292AC71CE5009290BC /* AppDelegate.swift */,
+				CE48FF2B2AC71CE5009290BC /* SceneDelegate.swift */,
+				CE48FF372AC71CE6009290BC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE9F93082AE2D8FF00246E38 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE48FF322AC71CE6009290BC /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9YZ66R8B68;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW3/Info.plist;
+				INFOPLIST_FILE = HW3/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +356,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9YZ66R8B68;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW3/Info.plist;
+				INFOPLIST_FILE = HW3/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
