@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet weak var redValue: UILabel!
     @IBOutlet weak var greenValue: UILabel!
@@ -19,35 +19,61 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
+    var color: UIColor!
+    weak var delegate: ViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewRGB.layer.cornerRadius = 10
+        sendColor()
         setupView()
         setupLabels()
+
     }
-//MARK: - RGB sliders settings
     @IBAction func redSliderAction() {
         redValue.text = String(format: "%.2f", redSlider.value)
-        viewRGB.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+       setupView()
+        
     }
     @IBAction func greenSliderAction() {
         greenValue.text = String(format: "%.2f", greenSlider.value)
-        viewRGB.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        setupView()
     }
     @IBAction func blueSliderAction() {
         blueValue.text = String(format: "%.2f", blueSlider.value)
-        viewRGB.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        setupView()
+    }
+    
+    @IBAction func saveActionButton() {
+        delegate.getColor(UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1))
+        dismiss(animated: true)
+    }
+    
+    private func sendColor(){
+        let ciColor = CIColor(color:color)
+        redSlider.value = Float(ciColor.red)
+        blueSlider.value = Float(ciColor.blue)
+        greenSlider.value = Float(ciColor.green)
     }
 }
-// MARK: - Setup Label and viewRGB
+
+protocol ViewControllerDelegate: AnyObject{
+    func getColor(_ color: UIColor)
+}
+
 extension ViewController {
     private func setupLabels(){
-        redValue.text = redSlider.value.formatted()
-        greenValue.text = greenSlider.value.formatted()
-        blueValue.text = blueSlider.value.formatted()
+        redValue.text = String(format: "%.2f",redSlider.value)
+        greenValue.text = String(format: "%.2f",greenSlider.value)
+        blueValue.text = String(format: "%.2f",blueSlider.value)
     }
     private func setupView(){
-        viewRGB.layer.cornerRadius = 10
-        viewRGB.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        viewRGB.backgroundColor = UIColor(
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
+            alpha: 1
+        )
     }
 }

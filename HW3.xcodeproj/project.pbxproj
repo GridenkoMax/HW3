@@ -13,6 +13,7 @@
 		CE48FF312AC71CE5009290BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE48FF2F2AC71CE5009290BC /* Main.storyboard */; };
 		CE48FF332AC71CE6009290BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE48FF322AC71CE6009290BC /* Assets.xcassets */; };
 		CE48FF362AC71CE6009290BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE48FF342AC71CE6009290BC /* LaunchScreen.storyboard */; };
+		CEE1E6372AE02DB100AAADC7 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE1E6362AE02DB100AAADC7 /* StartScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE48FF322AC71CE6009290BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE48FF352AC71CE6009290BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE48FF372AC71CE6009290BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE1E6362AE02DB100AAADC7 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CE48FF292AC71CE5009290BC /* AppDelegate.swift */,
 				CE48FF2B2AC71CE5009290BC /* SceneDelegate.swift */,
 				CE48FF2D2AC71CE5009290BC /* ViewController.swift */,
+				CEE1E6362AE02DB100AAADC7 /* StartScreenViewController.swift */,
 				CE48FF2F2AC71CE5009290BC /* Main.storyboard */,
 				CE48FF322AC71CE6009290BC /* Assets.xcassets */,
 				CE48FF342AC71CE6009290BC /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				CE48FF2E2AC71CE5009290BC /* ViewController.swift in Sources */,
 				CE48FF2A2AC71CE5009290BC /* AppDelegate.swift in Sources */,
 				CE48FF2C2AC71CE5009290BC /* SceneDelegate.swift in Sources */,
+				CEE1E6372AE02DB100AAADC7 /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
