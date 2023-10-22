@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     @IBOutlet weak var redValue: UILabel!
     @IBOutlet weak var greenValue: UILabel!
@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     
     var color: UIColor!
-    weak var delegate: ViewControllerDelegate!
+    weak var delegate: SettingsViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +58,7 @@ final class ViewController: UIViewController {
     }
 }
 
-protocol ViewControllerDelegate: AnyObject{
-    func getColor(_ color: UIColor)
-}
-
-extension ViewController {
+extension SettingsViewController {
     private func setupLabels(){
         redValue.text = String(format: "%.2f",redSlider.value)
         greenValue.text = String(format: "%.2f",greenSlider.value)

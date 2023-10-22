@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+protocol SettingsViewControllerDelegate: AnyObject{
+    func getColor(_ color: UIColor)
+}
+
 final class StartScreenViewController: UIViewController {
     
     var color = UIColor.brown
@@ -17,12 +22,12 @@ final class StartScreenViewController: UIViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let settingsVC = segue.destination as? ViewController else { return }
+        guard let settingsVC = segue.destination as? SettingsViewController else { return }
         settingsVC.color = view.backgroundColor
         settingsVC.delegate = self
     }
 }
-extension StartScreenViewController: ViewControllerDelegate {
+extension StartScreenViewController: SettingsViewControllerDelegate {
     func getColor(_ color: UIColor) {
         view.backgroundColor = color
     }
