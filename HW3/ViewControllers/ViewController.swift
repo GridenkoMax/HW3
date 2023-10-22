@@ -27,7 +27,7 @@ final class ViewController: UIViewController {
         
         viewRGB.layer.cornerRadius = 10
         sendColor()
-        setupView()
+        viewRGB.backgroundColor = color
         setupLabels()
         
     }
